@@ -1,0 +1,235 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/main.o
+SmallConst SMALLCONST 0 800 800 1C 1
+code CODE 0 81C 81C B2 1
+udata_acs COMRAM 1 0 0 5 1
+Sinatec CODE 0 8CE 8CE 4 1
+config CONFIG 4 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F60-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 0-7FF 1
+CONST 8D2-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 8D2-7FFF 1
+CODE 0-7FF 1
+CODE 8D2-7FFF 1
+BIGRAM 0-7FF 1
+COMRAM 5-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 8D2-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/main.o
+800 SmallConst SMALLCONST >15:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+80D SmallConst SMALLCONST >16:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8CE Sinatec CODE >11:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+81C code CODE >14:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+81E code CODE >15:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+820 code CODE >17:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+822 code CODE >18:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+824 code CODE >19:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+828 code CODE >20:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+82A code CODE >24:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+82C code CODE >25:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+82E code CODE >27:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+832 code CODE >28:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+834 code CODE >29:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+838 code CODE >30:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+83A code CODE >35:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+83C code CODE >36:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+83E code CODE >38:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+842 code CODE >39:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+844 code CODE >40:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+848 code CODE >41:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+84A code CODE >45:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+84C code CODE >46:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+84E code CODE >48:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+850 code CODE >49:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+852 code CODE >50:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+856 code CODE >51:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/Retardos_picass.inc
+858 code CODE >9:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+85A code CODE >10:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+85C code CODE >11:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+85E code CODE >12:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+860 code CODE >13:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+862 code CODE >14:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+864 code CODE >16:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+866 code CODE >17:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+868 code CODE >18:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+86A code CODE >20:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+86C code CODE >21:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+86E code CODE >22:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+870 code CODE >23:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+872 code CODE >25:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+874 code CODE >29:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+876 code CODE >32:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+878 code CODE >33:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+87C code CODE >34:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+87E code CODE >40:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+880 code CODE >41:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+882 code CODE >42:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+884 code CODE >43:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+886 code CODE >44:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+888 code CODE >45:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+88A code CODE >46:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+88C code CODE >47:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+88E code CODE >48:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+890 code CODE >49:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+892 code CODE >50:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+894 code CODE >51:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+896 code CODE >53:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+898 code CODE >55:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+89A code CODE >56:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+89C code CODE >57:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+8A0 code CODE >58:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+8A2 code CODE >60:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+8A4 code CODE >61:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+8A8 code CODE >62:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X/uart.inc
+8AC code CODE >26:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8AE code CODE >27:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8B0 code CODE >28:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8B2 code CODE >33:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8B4 code CODE >34:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8B6 code CODE >35:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8B8 code CODE >36:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8BA code CODE >37:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8BE code CODE >38:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8C0 code CODE >50:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8C2 code CODE >51:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8C6 code CODE >52:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+8CA code CODE >55:F:\Project\assembler_mmj\xc8\Aplicacion_Sinatec.X\main.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 8D2 0 ABS 0 - -
+__Hspace_1 5 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 60000E 0 ABS 0 - -
+__LSinatec 0 0 ABS 0 Sinatec -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+__Hudata_bank4 0 0 ABS 0 udata_bank4 -
+__Hudata_bank5 0 0 ABS 0 udata_bank5 -
+__Hudata_bank6 0 0 ABS 0 udata_bank6 -
+__Hudata_bank7 0 0 ABS 0 udata_bank7 -
+__HSinatec 0 0 ABS 0 Sinatec -
+isa$xinst 0 0 ABS 0 - build/default/production/main.o
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 30000E 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__HSmallConst 0 0 ABS 0 SmallConst -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 8D2 0 ABS 0 - -
+__S1 5 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__LSmallConst 0 0 ABS 0 SmallConst -
+contador1 0 0 COMRAM 1 udata_acs build/default/production/main.o
+contador2 1 0 COMRAM 1 udata_acs build/default/production/main.o
+contador3 2 0 COMRAM 1 udata_acs build/default/production/main.o
+contador4 3 0 COMRAM 1 udata_acs build/default/production/main.o
+__Lconfig 0 0 CONFIG 4 config -
+isa$std 1 0 ABS 0 - build/default/production/main.o
+Cadena 800 0 SMALLCONST 0 SmallConst build/default/production/main.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+puntero 4 0 COMRAM 1 udata_acs build/default/production/main.o
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__Ludata_bank4 0 0 ABS 0 udata_bank4 -
+__Ludata_bank5 0 0 ABS 0 udata_bank5 -
+__Ludata_bank6 0 0 ABS 0 udata_bank6 -
+__Ludata_bank7 0 0 ABS 0 udata_bank7 -
+__Hudata_acs 0 0 ABS 0 udata_acs -
+__Ludata_acs 0 0 ABS 0 udata_acs -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+SmallConst 0 800 800 1C 1
+code 0 81C 81C B6 1
+udata_acs 1 0 0 5 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
